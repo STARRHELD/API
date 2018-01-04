@@ -21,10 +21,22 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     List Characters
 */
 
-Route::get('/characters', 'API\Characters\CharacterController@index');
+Route::get('characters', 'API\Characters\CharacterController@index');
 
 /*
     List Single Character
 */
 
 Route::get('character/{id}', 'API\Characters\CharacterController@show');
+
+/*
+    List Auctions
+*/
+
+Route::get('auctions', 'API\Characters\AuctionController@index');
+
+/*
+    List Single Auction
+*/
+
+Route::get('auction/{id}', 'API\Characters\AuctionController@show');

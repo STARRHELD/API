@@ -5,9 +5,9 @@
  * Date: Wed, 21 Dec 2016 15:02:13 +0000.
  */
 
-namespace ThibaudDT\TrinityCoreModels\Characters;
+namespace App\Models\Characters;
 
-use Reliese\Database\Eloquent\Model as Eloquent;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
  * Class Auctionhouse
@@ -23,12 +23,12 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $startbid
  * @property int $deposit
  *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class Auctionhouse extends Eloquent
 {
 	protected $connection = 'characters';
 	protected $table = 'auctionhouse';
+
 	public $incrementing = false;
 	public $timestamps = false;
 
