@@ -24,12 +24,4 @@ class Character extends Resource
             'level' => $this->level
         ];
     }
-
-    public function with($request)
-    {
-        return [
-            'version' => '0.1 APLHA',
-            'author'  => url('https://starrheld.com')
-        ];
-    }
 }
