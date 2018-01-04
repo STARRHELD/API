@@ -79,13 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    {{ config('app.name') }}&trade;
+                    {{ config('app.name') }}
                 </div>
 
                 <div class="links">
-                    <a href="#">Content</a>
-                    <a href="#">Management</a>
-                    <a href="#">System</a>
+                    <a href="#">Something Awesome Is On The Way =D</a>
                 </div>
             </div>
         </div>
