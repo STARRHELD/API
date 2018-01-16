@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class GameTele
- * 
+ * Class GameTele.
+ *
  * @property int $id
  * @property float $position_x
  * @property float $position_y
@@ -19,29 +19,27 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property float $orientation
  * @property int $map
  * @property string $name
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class GameTele extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'game_tele';
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'game_tele';
+    public $timestamps = false;
 
-	protected $casts = [
-		'position_x' => 'float',
-		'position_y' => 'float',
-		'position_z' => 'float',
-		'orientation' => 'float',
-		'map' => 'int'
-	];
+    protected $casts = [
+        'position_x'  => 'float',
+        'position_y'  => 'float',
+        'position_z'  => 'float',
+        'orientation' => 'float',
+        'map'         => 'int',
+    ];
 
-	protected $fillable = [
-		'position_x',
-		'position_y',
-		'position_z',
-		'orientation',
-		'map',
-		'name'
-	];
+    protected $fillable = [
+        'position_x',
+        'position_y',
+        'position_z',
+        'orientation',
+        'map',
+        'name',
+    ];
 }

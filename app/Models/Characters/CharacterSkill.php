@@ -10,30 +10,28 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CharacterSkill
- * 
+ * Class CharacterSkill.
+ *
  * @property int $guid
  * @property int $skill
  * @property int $value
  * @property int $max
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CharacterSkill extends Eloquent
 {
-	protected $connection = 'characters';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'skill' => 'int',
-		'value' => 'int',
-		'max' => 'int'
-	];
+    protected $casts = [
+        'guid'  => 'int',
+        'skill' => 'int',
+        'value' => 'int',
+        'max'   => 'int',
+    ];
 
-	protected $fillable = [
-		'value',
-		'max'
-	];
+    protected $fillable = [
+        'value',
+        'max',
+    ];
 }

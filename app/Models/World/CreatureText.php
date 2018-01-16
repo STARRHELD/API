@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CreatureText
- * 
+ * Class CreatureText.
+ *
  * @property int $entry
  * @property int $groupid
  * @property int $id
@@ -25,40 +25,38 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $BroadcastTextId
  * @property int $TextRange
  * @property string $comment
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CreatureText extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'creature_text';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'creature_text';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'entry' => 'int',
-		'groupid' => 'int',
-		'id' => 'int',
-		'type' => 'int',
-		'language' => 'int',
-		'probability' => 'float',
-		'emote' => 'int',
-		'duration' => 'int',
-		'sound' => 'int',
-		'BroadcastTextId' => 'int',
-		'TextRange' => 'int'
-	];
+    protected $casts = [
+        'entry'           => 'int',
+        'groupid'         => 'int',
+        'id'              => 'int',
+        'type'            => 'int',
+        'language'        => 'int',
+        'probability'     => 'float',
+        'emote'           => 'int',
+        'duration'        => 'int',
+        'sound'           => 'int',
+        'BroadcastTextId' => 'int',
+        'TextRange'       => 'int',
+    ];
 
-	protected $fillable = [
-		'text',
-		'type',
-		'language',
-		'probability',
-		'emote',
-		'duration',
-		'sound',
-		'BroadcastTextId',
-		'TextRange',
-		'comment'
-	];
+    protected $fillable = [
+        'text',
+        'type',
+        'language',
+        'probability',
+        'emote',
+        'duration',
+        'sound',
+        'BroadcastTextId',
+        'TextRange',
+        'comment',
+    ];
 }

@@ -10,27 +10,25 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class GameEventPool
- * 
+ * Class GameEventPool.
+ *
  * @property int $eventEntry
  * @property int $pool_entry
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class GameEventPool extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'game_event_pool';
-	protected $primaryKey = 'pool_entry';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'game_event_pool';
+    protected $primaryKey = 'pool_entry';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'eventEntry' => 'int',
-		'pool_entry' => 'int'
-	];
+    protected $casts = [
+        'eventEntry' => 'int',
+        'pool_entry' => 'int',
+    ];
 
-	protected $fillable = [
-		'eventEntry'
-	];
+    protected $fillable = [
+        'eventEntry',
+    ];
 }

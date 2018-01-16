@@ -10,30 +10,28 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Version
- * 
+ * Class Version.
+ *
  * @property string $core_version
  * @property string $core_revision
  * @property string $db_version
  * @property int $cache_id
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class Version extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'version';
-	protected $primaryKey = 'core_version';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'version';
+    protected $primaryKey = 'core_version';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'cache_id' => 'int'
-	];
+    protected $casts = [
+        'cache_id' => 'int',
+    ];
 
-	protected $fillable = [
-		'core_revision',
-		'db_version',
-		'cache_id'
-	];
+    protected $fillable = [
+        'core_revision',
+        'db_version',
+        'cache_id',
+    ];
 }

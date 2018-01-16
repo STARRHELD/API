@@ -10,21 +10,19 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CharacterBattlegroundRandom
- * 
- * @property int $guid
+ * Class CharacterBattlegroundRandom.
  *
- * @package ThibaudDT\TrinityCoreModels\Characters
+ * @property int $guid
  */
 class CharacterBattlegroundRandom extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'character_battleground_random';
-	protected $primaryKey = 'guid';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'character_battleground_random';
+    protected $primaryKey = 'guid';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int'
-	];
+    protected $casts = [
+        'guid' => 'int',
+    ];
 }

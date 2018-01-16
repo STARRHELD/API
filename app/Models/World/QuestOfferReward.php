@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class QuestOfferReward
- * 
+ * Class QuestOfferReward.
+ *
  * @property int $ID
  * @property int $Emote1
  * @property int $Emote2
@@ -23,40 +23,38 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $EmoteDelay4
  * @property string $RewardText
  * @property int $VerifiedBuild
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class QuestOfferReward extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'quest_offer_reward';
-	protected $primaryKey = 'ID';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'quest_offer_reward';
+    protected $primaryKey = 'ID';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'ID' => 'int',
-		'Emote1' => 'int',
-		'Emote2' => 'int',
-		'Emote3' => 'int',
-		'Emote4' => 'int',
-		'EmoteDelay1' => 'int',
-		'EmoteDelay2' => 'int',
-		'EmoteDelay3' => 'int',
-		'EmoteDelay4' => 'int',
-		'VerifiedBuild' => 'int'
-	];
+    protected $casts = [
+        'ID'            => 'int',
+        'Emote1'        => 'int',
+        'Emote2'        => 'int',
+        'Emote3'        => 'int',
+        'Emote4'        => 'int',
+        'EmoteDelay1'   => 'int',
+        'EmoteDelay2'   => 'int',
+        'EmoteDelay3'   => 'int',
+        'EmoteDelay4'   => 'int',
+        'VerifiedBuild' => 'int',
+    ];
 
-	protected $fillable = [
-		'Emote1',
-		'Emote2',
-		'Emote3',
-		'Emote4',
-		'EmoteDelay1',
-		'EmoteDelay2',
-		'EmoteDelay3',
-		'EmoteDelay4',
-		'RewardText',
-		'VerifiedBuild'
-	];
+    protected $fillable = [
+        'Emote1',
+        'Emote2',
+        'Emote3',
+        'Emote4',
+        'EmoteDelay1',
+        'EmoteDelay2',
+        'EmoteDelay3',
+        'EmoteDelay4',
+        'RewardText',
+        'VerifiedBuild',
+    ];
 }

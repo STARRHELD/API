@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CalendarEvent
- * 
+ * Class CalendarEvent.
+ *
  * @property int $id
  * @property int $creator
  * @property string $title
@@ -21,33 +21,31 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $eventtime
  * @property int $flags
  * @property int $time2
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CalendarEvent extends Eloquent
 {
-	protected $connection = 'characters';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'creator' => 'int',
-		'type' => 'bool',
-		'dungeon' => 'int',
-		'eventtime' => 'int',
-		'flags' => 'int',
-		'time2' => 'int'
-	];
+    protected $casts = [
+        'id'        => 'int',
+        'creator'   => 'int',
+        'type'      => 'bool',
+        'dungeon'   => 'int',
+        'eventtime' => 'int',
+        'flags'     => 'int',
+        'time2'     => 'int',
+    ];
 
-	protected $fillable = [
-		'creator',
-		'title',
-		'description',
-		'type',
-		'dungeon',
-		'eventtime',
-		'flags',
-		'time2'
-	];
+    protected $fillable = [
+        'creator',
+        'title',
+        'description',
+        'type',
+        'dungeon',
+        'eventtime',
+        'flags',
+        'time2',
+    ];
 }

@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class GuildEventlog
- * 
+ * Class GuildEventlog.
+ *
  * @property int $guildid
  * @property int $LogGuid
  * @property int $EventType
@@ -19,31 +19,29 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $PlayerGuid2
  * @property int $NewRank
  * @property int $TimeStamp
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class GuildEventlog extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'guild_eventlog';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'guild_eventlog';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guildid' => 'int',
-		'LogGuid' => 'int',
-		'EventType' => 'int',
-		'PlayerGuid1' => 'int',
-		'PlayerGuid2' => 'int',
-		'NewRank' => 'int',
-		'TimeStamp' => 'int'
-	];
+    protected $casts = [
+        'guildid'     => 'int',
+        'LogGuid'     => 'int',
+        'EventType'   => 'int',
+        'PlayerGuid1' => 'int',
+        'PlayerGuid2' => 'int',
+        'NewRank'     => 'int',
+        'TimeStamp'   => 'int',
+    ];
 
-	protected $fillable = [
-		'EventType',
-		'PlayerGuid1',
-		'PlayerGuid2',
-		'NewRank',
-		'TimeStamp'
-	];
+    protected $fillable = [
+        'EventType',
+        'PlayerGuid1',
+        'PlayerGuid2',
+        'NewRank',
+        'TimeStamp',
+    ];
 }

@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Group
- * 
+ * Class Group.
+ *
  * @property int $guid
  * @property int $leaderGuid
  * @property int $lootMethod
@@ -29,52 +29,50 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $difficulty
  * @property int $raidDifficulty
  * @property int $masterLooterGuid
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class Group extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $primaryKey = 'guid';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $primaryKey = 'guid';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'leaderGuid' => 'int',
-		'lootMethod' => 'int',
-		'looterGuid' => 'int',
-		'lootThreshold' => 'int',
-		'icon1' => 'int',
-		'icon2' => 'int',
-		'icon3' => 'int',
-		'icon4' => 'int',
-		'icon5' => 'int',
-		'icon6' => 'int',
-		'icon7' => 'int',
-		'icon8' => 'int',
-		'groupType' => 'int',
-		'difficulty' => 'int',
-		'raidDifficulty' => 'int',
-		'masterLooterGuid' => 'int'
-	];
+    protected $casts = [
+        'guid'             => 'int',
+        'leaderGuid'       => 'int',
+        'lootMethod'       => 'int',
+        'looterGuid'       => 'int',
+        'lootThreshold'    => 'int',
+        'icon1'            => 'int',
+        'icon2'            => 'int',
+        'icon3'            => 'int',
+        'icon4'            => 'int',
+        'icon5'            => 'int',
+        'icon6'            => 'int',
+        'icon7'            => 'int',
+        'icon8'            => 'int',
+        'groupType'        => 'int',
+        'difficulty'       => 'int',
+        'raidDifficulty'   => 'int',
+        'masterLooterGuid' => 'int',
+    ];
 
-	protected $fillable = [
-		'leaderGuid',
-		'lootMethod',
-		'looterGuid',
-		'lootThreshold',
-		'icon1',
-		'icon2',
-		'icon3',
-		'icon4',
-		'icon5',
-		'icon6',
-		'icon7',
-		'icon8',
-		'groupType',
-		'difficulty',
-		'raidDifficulty',
-		'masterLooterGuid'
-	];
+    protected $fillable = [
+        'leaderGuid',
+        'lootMethod',
+        'looterGuid',
+        'lootThreshold',
+        'icon1',
+        'icon2',
+        'icon3',
+        'icon4',
+        'icon5',
+        'icon6',
+        'icon7',
+        'icon8',
+        'groupType',
+        'difficulty',
+        'raidDifficulty',
+        'masterLooterGuid',
+    ];
 }

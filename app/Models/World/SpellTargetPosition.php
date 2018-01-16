@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class SpellTargetPosition
- * 
+ * Class SpellTargetPosition.
+ *
  * @property int $ID
  * @property int $EffectIndex
  * @property int $MapID
@@ -20,33 +20,31 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property float $PositionZ
  * @property float $Orientation
  * @property int $VerifiedBuild
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class SpellTargetPosition extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'spell_target_position';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'spell_target_position';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'ID' => 'int',
-		'EffectIndex' => 'int',
-		'MapID' => 'int',
-		'PositionX' => 'float',
-		'PositionY' => 'float',
-		'PositionZ' => 'float',
-		'Orientation' => 'float',
-		'VerifiedBuild' => 'int'
-	];
+    protected $casts = [
+        'ID'            => 'int',
+        'EffectIndex'   => 'int',
+        'MapID'         => 'int',
+        'PositionX'     => 'float',
+        'PositionY'     => 'float',
+        'PositionZ'     => 'float',
+        'Orientation'   => 'float',
+        'VerifiedBuild' => 'int',
+    ];
 
-	protected $fillable = [
-		'MapID',
-		'PositionX',
-		'PositionY',
-		'PositionZ',
-		'Orientation',
-		'VerifiedBuild'
-	];
+    protected $fillable = [
+        'MapID',
+        'PositionX',
+        'PositionY',
+        'PositionZ',
+        'Orientation',
+        'VerifiedBuild',
+    ];
 }

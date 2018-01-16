@@ -10,25 +10,23 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class AreatriggerTavern
- * 
+ * Class AreatriggerTavern.
+ *
  * @property int $id
  * @property string $name
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class AreatriggerTavern extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'areatrigger_tavern';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'areatrigger_tavern';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int'
-	];
+    protected $casts = [
+        'id' => 'int',
+    ];
 
-	protected $fillable = [
-		'name'
-	];
+    protected $fillable = [
+        'name',
+    ];
 }

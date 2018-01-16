@@ -10,33 +10,31 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class GameEventModelEquip
- * 
+ * Class GameEventModelEquip.
+ *
  * @property int $eventEntry
  * @property int $guid
  * @property int $modelid
  * @property int $equipment_id
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class GameEventModelEquip extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'game_event_model_equip';
-	protected $primaryKey = 'guid';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'game_event_model_equip';
+    protected $primaryKey = 'guid';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'eventEntry' => 'int',
-		'guid' => 'int',
-		'modelid' => 'int',
-		'equipment_id' => 'int'
-	];
+    protected $casts = [
+        'eventEntry'   => 'int',
+        'guid'         => 'int',
+        'modelid'      => 'int',
+        'equipment_id' => 'int',
+    ];
 
-	protected $fillable = [
-		'eventEntry',
-		'modelid',
-		'equipment_id'
-	];
+    protected $fillable = [
+        'eventEntry',
+        'modelid',
+        'equipment_id',
+    ];
 }

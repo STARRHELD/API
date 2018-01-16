@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class WaypointDatum
- * 
+ * Class WaypointDatum.
+ *
  * @property int $id
  * @property int $point
  * @property float $position_x
@@ -23,38 +23,36 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $action
  * @property int $action_chance
  * @property int $wpguid
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class WaypointDatum extends Eloquent
 {
-	protected $connection = 'world';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'point' => 'int',
-		'position_x' => 'float',
-		'position_y' => 'float',
-		'position_z' => 'float',
-		'orientation' => 'float',
-		'delay' => 'int',
-		'move_type' => 'int',
-		'action' => 'int',
-		'action_chance' => 'int',
-		'wpguid' => 'int'
-	];
+    protected $casts = [
+        'id'            => 'int',
+        'point'         => 'int',
+        'position_x'    => 'float',
+        'position_y'    => 'float',
+        'position_z'    => 'float',
+        'orientation'   => 'float',
+        'delay'         => 'int',
+        'move_type'     => 'int',
+        'action'        => 'int',
+        'action_chance' => 'int',
+        'wpguid'        => 'int',
+    ];
 
-	protected $fillable = [
-		'position_x',
-		'position_y',
-		'position_z',
-		'orientation',
-		'delay',
-		'move_type',
-		'action',
-		'action_chance',
-		'wpguid'
-	];
+    protected $fillable = [
+        'position_x',
+        'position_y',
+        'position_z',
+        'orientation',
+        'delay',
+        'move_type',
+        'action',
+        'action_chance',
+        'wpguid',
+    ];
 }

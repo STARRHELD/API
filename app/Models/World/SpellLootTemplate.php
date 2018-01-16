@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class SpellLootTemplate
- * 
+ * Class SpellLootTemplate.
+ *
  * @property int $Entry
  * @property int $Item
  * @property int $Reference
@@ -22,36 +22,34 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $MinCount
  * @property int $MaxCount
  * @property string $Comment
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class SpellLootTemplate extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'spell_loot_template';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'spell_loot_template';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'Entry' => 'int',
-		'Item' => 'int',
-		'Reference' => 'int',
-		'Chance' => 'float',
-		'QuestRequired' => 'bool',
-		'LootMode' => 'int',
-		'GroupId' => 'int',
-		'MinCount' => 'int',
-		'MaxCount' => 'int'
-	];
+    protected $casts = [
+        'Entry'         => 'int',
+        'Item'          => 'int',
+        'Reference'     => 'int',
+        'Chance'        => 'float',
+        'QuestRequired' => 'bool',
+        'LootMode'      => 'int',
+        'GroupId'       => 'int',
+        'MinCount'      => 'int',
+        'MaxCount'      => 'int',
+    ];
 
-	protected $fillable = [
-		'Reference',
-		'Chance',
-		'QuestRequired',
-		'LootMode',
-		'GroupId',
-		'MinCount',
-		'MaxCount',
-		'Comment'
-	];
+    protected $fillable = [
+        'Reference',
+        'Chance',
+        'QuestRequired',
+        'LootMode',
+        'GroupId',
+        'MinCount',
+        'MaxCount',
+        'Comment',
+    ];
 }

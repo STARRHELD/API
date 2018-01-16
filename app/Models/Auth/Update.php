@@ -10,35 +10,33 @@ namespace ThibaudDT\TrinityCoreModels\Auth;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Update
- * 
+ * Class Update.
+ *
  * @property string $name
  * @property string $hash
  * @property string $state
  * @property \Carbon\Carbon $timestamp
  * @property int $speed
- *
- * @package ThibaudDT\TrinityCoreModels\Auth
  */
 class Update extends Eloquent
 {
-	protected $connection = 'auth';
-	protected $primaryKey = 'name';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'auth';
+    protected $primaryKey = 'name';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'speed' => 'int'
-	];
+    protected $casts = [
+        'speed' => 'int',
+    ];
 
-	protected $dates = [
-		'timestamp'
-	];
+    protected $dates = [
+        'timestamp',
+    ];
 
-	protected $fillable = [
-		'hash',
-		'state',
-		'timestamp',
-		'speed'
-	];
+    protected $fillable = [
+        'hash',
+        'state',
+        'timestamp',
+        'speed',
+    ];
 }

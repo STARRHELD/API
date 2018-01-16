@@ -10,24 +10,22 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CharacterTalent
- * 
+ * Class CharacterTalent.
+ *
  * @property int $guid
  * @property int $spell
  * @property int $talentGroup
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CharacterTalent extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'character_talent';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'character_talent';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'spell' => 'int',
-		'talentGroup' => 'int'
-	];
+    protected $casts = [
+        'guid'        => 'int',
+        'spell'       => 'int',
+        'talentGroup' => 'int',
+    ];
 }

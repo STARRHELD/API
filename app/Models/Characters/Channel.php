@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Channel
- * 
+ * Class Channel.
+ *
  * @property string $name
  * @property int $team
  * @property int $announce
@@ -19,31 +19,29 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $password
  * @property string $bannedList
  * @property int $lastUsed
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class Channel extends Eloquent
 {
-	protected $connection = 'characters';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'team' => 'int',
-		'announce' => 'int',
-		'ownership' => 'int',
-		'lastUsed' => 'int'
-	];
+    protected $casts = [
+        'team'      => 'int',
+        'announce'  => 'int',
+        'ownership' => 'int',
+        'lastUsed'  => 'int',
+    ];
 
-	protected $hidden = [
-		'password'
-	];
+    protected $hidden = [
+        'password',
+    ];
 
-	protected $fillable = [
-		'announce',
-		'ownership',
-		'password',
-		'bannedList',
-		'lastUsed'
-	];
+    protected $fillable = [
+        'announce',
+        'ownership',
+        'password',
+        'bannedList',
+        'lastUsed',
+    ];
 }

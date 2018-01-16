@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class LocalesCreatureText
- * 
+ * Class LocalesCreatureText.
+ *
  * @property int $entry
  * @property int $groupid
  * @property int $id
@@ -23,30 +23,28 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property string $text_loc6
  * @property string $text_loc7
  * @property string $text_loc8
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class LocalesCreatureText extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'locales_creature_text';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'locales_creature_text';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'entry' => 'int',
-		'groupid' => 'int',
-		'id' => 'int'
-	];
+    protected $casts = [
+        'entry'   => 'int',
+        'groupid' => 'int',
+        'id'      => 'int',
+    ];
 
-	protected $fillable = [
-		'text_loc1',
-		'text_loc2',
-		'text_loc3',
-		'text_loc4',
-		'text_loc5',
-		'text_loc6',
-		'text_loc7',
-		'text_loc8'
-	];
+    protected $fillable = [
+        'text_loc1',
+        'text_loc2',
+        'text_loc3',
+        'text_loc4',
+        'text_loc5',
+        'text_loc6',
+        'text_loc7',
+        'text_loc8',
+    ];
 }

@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CalendarInvite
- * 
+ * Class CalendarInvite.
+ *
  * @property int $id
  * @property int $event
  * @property int $invitee
@@ -20,32 +20,30 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $statustime
  * @property bool $rank
  * @property string $text
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CalendarInvite extends Eloquent
 {
-	protected $connection = 'characters';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'event' => 'int',
-		'invitee' => 'int',
-		'sender' => 'int',
-		'status' => 'bool',
-		'statustime' => 'int',
-		'rank' => 'bool'
-	];
+    protected $casts = [
+        'id'         => 'int',
+        'event'      => 'int',
+        'invitee'    => 'int',
+        'sender'     => 'int',
+        'status'     => 'bool',
+        'statustime' => 'int',
+        'rank'       => 'bool',
+    ];
 
-	protected $fillable = [
-		'event',
-		'invitee',
-		'sender',
-		'status',
-		'statustime',
-		'rank',
-		'text'
-	];
+    protected $fillable = [
+        'event',
+        'invitee',
+        'sender',
+        'status',
+        'statustime',
+        'rank',
+        'text',
+    ];
 }

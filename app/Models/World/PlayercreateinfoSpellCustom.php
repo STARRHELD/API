@@ -10,29 +10,27 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class PlayercreateinfoSpellCustom
- * 
+ * Class PlayercreateinfoSpellCustom.
+ *
  * @property int $racemask
  * @property int $classmask
  * @property int $Spell
  * @property string $Note
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class PlayercreateinfoSpellCustom extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'playercreateinfo_spell_custom';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'playercreateinfo_spell_custom';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'racemask' => 'int',
-		'classmask' => 'int',
-		'Spell' => 'int'
-	];
+    protected $casts = [
+        'racemask'  => 'int',
+        'classmask' => 'int',
+        'Spell'     => 'int',
+    ];
 
-	protected $fillable = [
-		'Note'
-	];
+    protected $fillable = [
+        'Note',
+    ];
 }

@@ -10,27 +10,25 @@ namespace ThibaudDT\TrinityCoreModels\Auth;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Realmcharacter
- * 
+ * Class Realmcharacter.
+ *
  * @property int $realmid
  * @property int $acctid
  * @property int $numchars
- *
- * @package ThibaudDT\TrinityCoreModels\Auth
  */
 class Realmcharacter extends Eloquent
 {
-	protected $connection = 'auth';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'auth';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'realmid' => 'int',
-		'acctid' => 'int',
-		'numchars' => 'int'
-	];
+    protected $casts = [
+        'realmid'  => 'int',
+        'acctid'   => 'int',
+        'numchars' => 'int',
+    ];
 
-	protected $fillable = [
-		'numchars'
-	];
+    protected $fillable = [
+        'numchars',
+    ];
 }

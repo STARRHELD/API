@@ -10,21 +10,19 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class PlayerFactionchangeReputation
- * 
+ * Class PlayerFactionchangeReputation.
+ *
  * @property int $alliance_id
  * @property int $horde_id
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class PlayerFactionchangeReputation extends Eloquent
 {
-	protected $connection = 'world';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'alliance_id' => 'int',
-		'horde_id' => 'int'
-	];
+    protected $casts = [
+        'alliance_id' => 'int',
+        'horde_id'    => 'int',
+    ];
 }

@@ -10,33 +10,31 @@ namespace ThibaudDT\TrinityCoreModels\Auth;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Log
- * 
+ * Class Log.
+ *
  * @property int $time
  * @property int $realm
  * @property string $type
  * @property int $level
  * @property string $string
- *
- * @package ThibaudDT\TrinityCoreModels\Auth
  */
 class Log extends Eloquent
 {
-	protected $connection = 'auth';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'auth';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'time' => 'int',
-		'realm' => 'int',
-		'level' => 'int'
-	];
+    protected $casts = [
+        'time'  => 'int',
+        'realm' => 'int',
+        'level' => 'int',
+    ];
 
-	protected $fillable = [
-		'time',
-		'realm',
-		'type',
-		'level',
-		'string'
-	];
+    protected $fillable = [
+        'time',
+        'realm',
+        'type',
+        'level',
+        'string',
+    ];
 }

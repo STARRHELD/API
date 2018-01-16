@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CharacterPetDeclinedname
- * 
+ * Class CharacterPetDeclinedname.
+ *
  * @property int $id
  * @property int $owner
  * @property string $genitive
@@ -19,27 +19,25 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $accusative
  * @property string $instrumental
  * @property string $prepositional
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CharacterPetDeclinedname extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'character_pet_declinedname';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'character_pet_declinedname';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'owner' => 'int'
-	];
+    protected $casts = [
+        'id'    => 'int',
+        'owner' => 'int',
+    ];
 
-	protected $fillable = [
-		'owner',
-		'genitive',
-		'dative',
-		'accusative',
-		'instrumental',
-		'prepositional'
-	];
+    protected $fillable = [
+        'owner',
+        'genitive',
+        'dative',
+        'accusative',
+        'instrumental',
+        'prepositional',
+    ];
 }

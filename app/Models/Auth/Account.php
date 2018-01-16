@@ -7,12 +7,12 @@
 
 namespace App\Models\Auth;
 
-use Illuminate\Database\Eloquent\Model as Eloquent;
 use App\Models\Characters\Character;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Account
- * 
+ * Class Account.
+ *
  * @property int $id
  * @property string $username
  * @property string $sha_pass_hash
@@ -39,37 +39,35 @@ use App\Models\Characters\Character;
  * @property int $recruiter
  * @property string $password
  * @property string $remember_token
- * 
  * @property \Illuminate\Database\Eloquent\Collection $rbac_account_permissions
- *
  */
 class Account extends Eloquent
 {
-	protected $connection = 'auth';
-	protected $table = 'account';
-	public $timestamps = false;
+    protected $connection = 'auth';
+    protected $table = 'account';
+    public $timestamps = false;
 
-	protected $casts = [
-		'failed_logins' => 'int',
-		'locked' => 'int',
-		'online' => 'int',
-		'expansion' => 'int',
-		'mutetime' => 'int',
-		'locale' => 'int',
-		'recruiter' => 'int'
-	];
+    protected $casts = [
+        'failed_logins' => 'int',
+        'locked'        => 'int',
+        'online'        => 'int',
+        'expansion'     => 'int',
+        'mutetime'      => 'int',
+        'locale'        => 'int',
+        'recruiter'     => 'int',
+    ];
 
-	protected $dates = [
-		'joindate',
-		'last_login'
-	];
+    protected $dates = [
+        'joindate',
+        'last_login',
+    ];
 
-	protected $hidden = [
-	    'sha_pass_hash',
+    protected $hidden = [
+        'sha_pass_hash',
         'sessionkey',
         'v',
         's',
-	];
+    ];
 
     protected $guarded = [
         'sessionkey',
@@ -77,47 +75,51 @@ class Account extends Eloquent
         's',
     ];
 
-	protected $fillable = [
-		'username',
-		'sha_pass_hash',
-		'token_key',
-		'email',
-		'reg_mail',
-		'joindate',
-		'last_ip',
-		'last_attempt_ip',
-		'failed_logins',
-		'locked',
-		'lock_country',
-		'last_login',
-		'online',
-		'expansion',
-		'mutetime',
-		'mutereason',
-		'muteby',
-		'locale',
-		'os',
-		'recruiter'
-	];
+    protected $fillable = [
+        'username',
+        'sha_pass_hash',
+        'token_key',
+        'email',
+        'reg_mail',
+        'joindate',
+        'last_ip',
+        'last_attempt_ip',
+        'failed_logins',
+        'locked',
+        'lock_country',
+        'last_login',
+        'online',
+        'expansion',
+        'mutetime',
+        'mutereason',
+        'muteby',
+        'locale',
+        'os',
+        'recruiter',
+    ];
 
-	public function rbac_account_permissions()
-	{
-		return $this->hasMany(\ThibaudDT\TrinityCoreModels\Auth\RbacAccountPermission::class, 'accountId');
-	}
-
-	public function accesses(){
-       return  $this->hasMany(AccountAccess::class,'id');
+    public function rbac_account_permissions()
+    {
+        return $this->hasMany(\ThibaudDT\TrinityCoreModels\Auth\RbacAccountPermission::class, 'accountId');
     }
 
-    public function characters(){
+    public function accesses()
+    {
+        return  $this->hasMany(AccountAccess::class, 'id');
+    }
+
+    public function characters()
+    {
         return $this->hasMany(Character::class, 'account');
     }
 
-    public function bans(){
+    public function bans()
+    {
         return $this->hasMany(AccountBanned::class, 'id');
     }
 
-    public function mutes(){
+    public function mutes()
+    {
         return $this->hasMany(AccountMuted::class, 'guid');
     }
 }

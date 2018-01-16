@@ -10,28 +10,25 @@ namespace ThibaudDT\TrinityCoreModels\Auth;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class RbacLinkedPermission
- * 
+ * Class RbacLinkedPermission.
+ *
  * @property int $id
  * @property int $linkedId
- * 
  * @property \ThibaudDT\TrinityCoreModels\Auth\RbacPermission $rbac_permission
- *
- * @package ThibaudDT\TrinityCoreModels\Auth
  */
 class RbacLinkedPermission extends Eloquent
 {
-	protected $connection = 'auth';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'auth';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'linkedId' => 'int'
-	];
+    protected $casts = [
+        'id'       => 'int',
+        'linkedId' => 'int',
+    ];
 
-	public function rbac_permission()
-	{
-		return $this->belongsTo(\ThibaudDT\TrinityCoreModels\Auth\RbacPermission::class, 'linkedId');
-	}
+    public function rbac_permission()
+    {
+        return $this->belongsTo(\ThibaudDT\TrinityCoreModels\Auth\RbacPermission::class, 'linkedId');
+    }
 }

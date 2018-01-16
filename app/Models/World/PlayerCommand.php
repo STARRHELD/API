@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class PlayerCommand
- * 
+ * Class PlayerCommand.
+ *
  * @property int $id
  * @property int $category
  * @property int $object_guid
@@ -19,29 +19,27 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $money_type
  * @property int $cost
  * @property int $owner
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class PlayerCommand extends Eloquent
 {
-	protected $connection = 'world';
-	public $timestamps = false;
+    protected $connection = 'world';
+    public $timestamps = false;
 
-	protected $casts = [
-		'category' => 'int',
-		'object_guid' => 'int',
-		'count' => 'int',
-		'money_type' => 'int',
-		'cost' => 'int',
-		'owner' => 'int'
-	];
+    protected $casts = [
+        'category'    => 'int',
+        'object_guid' => 'int',
+        'count'       => 'int',
+        'money_type'  => 'int',
+        'cost'        => 'int',
+        'owner'       => 'int',
+    ];
 
-	protected $fillable = [
-		'category',
-		'object_guid',
-		'count',
-		'money_type',
-		'cost',
-		'owner'
-	];
+    protected $fillable = [
+        'category',
+        'object_guid',
+        'count',
+        'money_type',
+        'cost',
+        'owner',
+    ];
 }

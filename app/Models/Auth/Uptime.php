@@ -10,33 +10,31 @@ namespace ThibaudDT\TrinityCoreModels\Auth;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Uptime
- * 
+ * Class Uptime.
+ *
  * @property int $realmid
  * @property int $starttime
  * @property int $uptime
  * @property int $maxplayers
  * @property string $revision
- *
- * @package ThibaudDT\TrinityCoreModels\Auth
  */
 class Uptime extends Eloquent
 {
-	protected $connection = 'auth';
-	protected $table = 'uptime';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'auth';
+    protected $table = 'uptime';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'realmid' => 'int',
-		'starttime' => 'int',
-		'uptime' => 'int',
-		'maxplayers' => 'int'
-	];
+    protected $casts = [
+        'realmid'    => 'int',
+        'starttime'  => 'int',
+        'uptime'     => 'int',
+        'maxplayers' => 'int',
+    ];
 
-	protected $fillable = [
-		'uptime',
-		'maxplayers',
-		'revision'
-	];
+    protected $fillable = [
+        'uptime',
+        'maxplayers',
+        'revision',
+    ];
 }

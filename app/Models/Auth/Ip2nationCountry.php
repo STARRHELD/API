@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Auth;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Ip2nationCountry
- * 
+ * Class Ip2nationCountry.
+ *
  * @property string $code
  * @property string $iso_code_2
  * @property string $iso_code_3
@@ -19,27 +19,25 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property string $country
  * @property float $lat
  * @property float $lon
- *
- * @package ThibaudDT\TrinityCoreModels\Auth
  */
 class Ip2nationCountry extends Eloquent
 {
-	protected $connection = 'auth';
-	protected $primaryKey = 'code';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'auth';
+    protected $primaryKey = 'code';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'lat' => 'float',
-		'lon' => 'float'
-	];
+    protected $casts = [
+        'lat' => 'float',
+        'lon' => 'float',
+    ];
 
-	protected $fillable = [
-		'iso_code_2',
-		'iso_code_3',
-		'iso_country',
-		'country',
-		'lat',
-		'lon'
-	];
+    protected $fillable = [
+        'iso_code_2',
+        'iso_code_3',
+        'iso_country',
+        'country',
+        'lat',
+        'lon',
+    ];
 }

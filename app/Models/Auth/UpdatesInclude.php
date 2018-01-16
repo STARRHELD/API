@@ -10,22 +10,20 @@ namespace ThibaudDT\TrinityCoreModels\Auth;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class UpdatesInclude
- * 
+ * Class UpdatesInclude.
+ *
  * @property string $path
  * @property string $state
- *
- * @package ThibaudDT\TrinityCoreModels\Auth
  */
 class UpdatesInclude extends Eloquent
 {
-	protected $connection = 'auth';
-	protected $table = 'updates_include';
-	protected $primaryKey = 'path';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'auth';
+    protected $table = 'updates_include';
+    protected $primaryKey = 'path';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $fillable = [
-		'state'
-	];
+    protected $fillable = [
+        'state',
+    ];
 }

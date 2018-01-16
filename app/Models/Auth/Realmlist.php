@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Auth;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Realmlist
- * 
+ * Class Realmlist.
+ *
  * @property int $id
  * @property string $name
  * @property string $address
@@ -24,36 +24,34 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $allowedSecurityLevel
  * @property float $population
  * @property int $gamebuild
- *
- * @package ThibaudDT\TrinityCoreModels\Auth
  */
 class Realmlist extends Eloquent
 {
-	protected $connection = 'auth';
-	protected $table = 'realmlist';
-	public $timestamps = false;
+    protected $connection = 'auth';
+    protected $table = 'realmlist';
+    public $timestamps = false;
 
-	protected $casts = [
-		'port' => 'int',
-		'icon' => 'int',
-		'flag' => 'int',
-		'timezone' => 'int',
-		'allowedSecurityLevel' => 'int',
-		'population' => 'float',
-		'gamebuild' => 'int'
-	];
+    protected $casts = [
+        'port'                 => 'int',
+        'icon'                 => 'int',
+        'flag'                 => 'int',
+        'timezone'             => 'int',
+        'allowedSecurityLevel' => 'int',
+        'population'           => 'float',
+        'gamebuild'            => 'int',
+    ];
 
-	protected $fillable = [
-		'name',
-		'address',
-		'localAddress',
-		'localSubnetMask',
-		'port',
-		'icon',
-		'flag',
-		'timezone',
-		'allowedSecurityLevel',
-		'population',
-		'gamebuild'
-	];
+    protected $fillable = [
+        'name',
+        'address',
+        'localAddress',
+        'localSubnetMask',
+        'port',
+        'icon',
+        'flag',
+        'timezone',
+        'allowedSecurityLevel',
+        'population',
+        'gamebuild',
+    ];
 }

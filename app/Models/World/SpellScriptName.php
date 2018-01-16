@@ -10,20 +10,18 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class SpellScriptName
- * 
+ * Class SpellScriptName.
+ *
  * @property int $spell_id
  * @property string $ScriptName
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class SpellScriptName extends Eloquent
 {
-	protected $connection = 'world';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'spell_id' => 'int'
-	];
+    protected $casts = [
+        'spell_id' => 'int',
+    ];
 }

@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class ArenaTeam
- * 
+ * Class ArenaTeam.
+ *
  * @property int $arenaTeamId
  * @property string $name
  * @property int $captainGuid
@@ -27,48 +27,46 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $emblemColor
  * @property int $borderStyle
  * @property int $borderColor
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class ArenaTeam extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'arena_team';
-	protected $primaryKey = 'arenaTeamId';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'arena_team';
+    protected $primaryKey = 'arenaTeamId';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'arenaTeamId' => 'int',
-		'captainGuid' => 'int',
-		'type' => 'int',
-		'rating' => 'int',
-		'seasonGames' => 'int',
-		'seasonWins' => 'int',
-		'weekGames' => 'int',
-		'weekWins' => 'int',
-		'rank' => 'int',
-		'backgroundColor' => 'int',
-		'emblemStyle' => 'int',
-		'emblemColor' => 'int',
-		'borderStyle' => 'int',
-		'borderColor' => 'int'
-	];
+    protected $casts = [
+        'arenaTeamId'     => 'int',
+        'captainGuid'     => 'int',
+        'type'            => 'int',
+        'rating'          => 'int',
+        'seasonGames'     => 'int',
+        'seasonWins'      => 'int',
+        'weekGames'       => 'int',
+        'weekWins'        => 'int',
+        'rank'            => 'int',
+        'backgroundColor' => 'int',
+        'emblemStyle'     => 'int',
+        'emblemColor'     => 'int',
+        'borderStyle'     => 'int',
+        'borderColor'     => 'int',
+    ];
 
-	protected $fillable = [
-		'name',
-		'captainGuid',
-		'type',
-		'rating',
-		'seasonGames',
-		'seasonWins',
-		'weekGames',
-		'weekWins',
-		'rank',
-		'backgroundColor',
-		'emblemStyle',
-		'emblemColor',
-		'borderStyle',
-		'borderColor'
-	];
+    protected $fillable = [
+        'name',
+        'captainGuid',
+        'type',
+        'rating',
+        'seasonGames',
+        'seasonWins',
+        'weekGames',
+        'weekWins',
+        'rank',
+        'backgroundColor',
+        'emblemStyle',
+        'emblemColor',
+        'borderStyle',
+        'borderColor',
+    ];
 }

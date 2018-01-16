@@ -10,22 +10,20 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Bugreport
- * 
+ * Class Bugreport.
+ *
  * @property int $id
  * @property string $type
  * @property string $content
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class Bugreport extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'bugreport';
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'bugreport';
+    public $timestamps = false;
 
-	protected $fillable = [
-		'type',
-		'content'
-	];
+    protected $fillable = [
+        'type',
+        'content',
+    ];
 }
