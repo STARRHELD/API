@@ -10,26 +10,24 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class PlayerCommandObject
- * 
+ * Class PlayerCommandObject.
+ *
  * @property int $guid
  * @property int $category
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class PlayerCommandObject extends Eloquent
 {
-	protected $connection = 'world';
-	protected $primaryKey = 'guid';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $primaryKey = 'guid';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'category' => 'int'
-	];
+    protected $casts = [
+        'guid'     => 'int',
+        'category' => 'int',
+    ];
 
-	protected $fillable = [
-		'category'
-	];
+    protected $fillable = [
+        'category',
+    ];
 }

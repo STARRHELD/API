@@ -10,27 +10,25 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CharacterArenaStat
- * 
+ * Class CharacterArenaStat.
+ *
  * @property int $guid
  * @property int $slot
  * @property int $matchMakerRating
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CharacterArenaStat extends Eloquent
 {
-	protected $connection = 'characters';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'slot' => 'int',
-		'matchMakerRating' => 'int'
-	];
+    protected $casts = [
+        'guid'             => 'int',
+        'slot'             => 'int',
+        'matchMakerRating' => 'int',
+    ];
 
-	protected $fillable = [
-		'matchMakerRating'
-	];
+    protected $fillable = [
+        'matchMakerRating',
+    ];
 }

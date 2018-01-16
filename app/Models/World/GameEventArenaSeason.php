@@ -10,21 +10,19 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class GameEventArenaSeason
- * 
+ * Class GameEventArenaSeason.
+ *
  * @property int $eventEntry
  * @property int $season
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class GameEventArenaSeason extends Eloquent
 {
-	protected $connection = 'world';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'eventEntry' => 'int',
-		'season' => 'int'
-	];
+    protected $casts = [
+        'eventEntry' => 'int',
+        'season'     => 'int',
+    ];
 }

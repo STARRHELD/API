@@ -10,22 +10,20 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CreatureQuestender
- * 
+ * Class CreatureQuestender.
+ *
  * @property int $id
  * @property int $quest
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CreatureQuestender extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'creature_questender';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'creature_questender';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'quest' => 'int'
-	];
+    protected $casts = [
+        'id'    => 'int',
+        'quest' => 'int',
+    ];
 }

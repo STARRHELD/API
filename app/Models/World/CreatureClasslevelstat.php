@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CreatureClasslevelstat
- * 
+ * Class CreatureClasslevelstat.
+ *
  * @property int $level
  * @property int $class
  * @property int $basehp0
@@ -25,41 +25,39 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property float $damage_exp1
  * @property float $damage_exp2
  * @property string $comment
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CreatureClasslevelstat extends Eloquent
 {
-	protected $connection = 'world';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'level' => 'int',
-		'class' => 'int',
-		'basehp0' => 'int',
-		'basehp1' => 'int',
-		'basehp2' => 'int',
-		'basemana' => 'int',
-		'basearmor' => 'int',
-		'attackpower' => 'int',
-		'rangedattackpower' => 'int',
-		'damage_base' => 'float',
-		'damage_exp1' => 'float',
-		'damage_exp2' => 'float'
-	];
+    protected $casts = [
+        'level'             => 'int',
+        'class'             => 'int',
+        'basehp0'           => 'int',
+        'basehp1'           => 'int',
+        'basehp2'           => 'int',
+        'basemana'          => 'int',
+        'basearmor'         => 'int',
+        'attackpower'       => 'int',
+        'rangedattackpower' => 'int',
+        'damage_base'       => 'float',
+        'damage_exp1'       => 'float',
+        'damage_exp2'       => 'float',
+    ];
 
-	protected $fillable = [
-		'basehp0',
-		'basehp1',
-		'basehp2',
-		'basemana',
-		'basearmor',
-		'attackpower',
-		'rangedattackpower',
-		'damage_base',
-		'damage_exp1',
-		'damage_exp2',
-		'comment'
-	];
+    protected $fillable = [
+        'basehp0',
+        'basehp1',
+        'basehp2',
+        'basemana',
+        'basearmor',
+        'attackpower',
+        'rangedattackpower',
+        'damage_base',
+        'damage_exp1',
+        'damage_exp2',
+        'comment',
+    ];
 }

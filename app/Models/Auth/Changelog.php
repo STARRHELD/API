@@ -10,30 +10,28 @@ namespace ThibaudDT\TrinityCoreModels\Auth;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Changelog
- * 
+ * Class Changelog.
+ *
  * @property int $id
  * @property string $title
  * @property string $description
  * @property int $created
  * @property string $author
- *
- * @package ThibaudDT\TrinityCoreModels\Auth
  */
 class Changelog extends Eloquent
 {
-	protected $connection = 'auth';
-	protected $table = 'changelog';
-	public $timestamps = false;
+    protected $connection = 'auth';
+    protected $table = 'changelog';
+    public $timestamps = false;
 
-	protected $casts = [
-		'created' => 'int'
-	];
+    protected $casts = [
+        'created' => 'int',
+    ];
 
-	protected $fillable = [
-		'title',
-		'description',
-		'created',
-		'author'
-	];
+    protected $fillable = [
+        'title',
+        'description',
+        'created',
+        'author',
+    ];
 }

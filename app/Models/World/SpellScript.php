@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class SpellScript
- * 
+ * Class SpellScript.
+ *
  * @property int $id
  * @property int $effIndex
  * @property int $delay
@@ -23,40 +23,38 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property float $y
  * @property float $z
  * @property float $o
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class SpellScript extends Eloquent
 {
-	protected $connection = 'world';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'effIndex' => 'int',
-		'delay' => 'int',
-		'command' => 'int',
-		'datalong' => 'int',
-		'datalong2' => 'int',
-		'dataint' => 'int',
-		'x' => 'float',
-		'y' => 'float',
-		'z' => 'float',
-		'o' => 'float'
-	];
+    protected $casts = [
+        'id'        => 'int',
+        'effIndex'  => 'int',
+        'delay'     => 'int',
+        'command'   => 'int',
+        'datalong'  => 'int',
+        'datalong2' => 'int',
+        'dataint'   => 'int',
+        'x'         => 'float',
+        'y'         => 'float',
+        'z'         => 'float',
+        'o'         => 'float',
+    ];
 
-	protected $fillable = [
-		'id',
-		'effIndex',
-		'delay',
-		'command',
-		'datalong',
-		'datalong2',
-		'dataint',
-		'x',
-		'y',
-		'z',
-		'o'
-	];
+    protected $fillable = [
+        'id',
+        'effIndex',
+        'delay',
+        'command',
+        'datalong',
+        'datalong2',
+        'dataint',
+        'x',
+        'y',
+        'z',
+        'o',
+    ];
 }

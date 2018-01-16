@@ -10,35 +10,33 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class PvpstatsBattleground
- * 
+ * Class PvpstatsBattleground.
+ *
  * @property int $id
  * @property int $winner_faction
  * @property int $bracket_id
  * @property int $type
  * @property \Carbon\Carbon $date
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class PvpstatsBattleground extends Eloquent
 {
-	protected $connection = 'characters';
-	public $timestamps = false;
+    protected $connection = 'characters';
+    public $timestamps = false;
 
-	protected $casts = [
-		'winner_faction' => 'int',
-		'bracket_id' => 'int',
-		'type' => 'int'
-	];
+    protected $casts = [
+        'winner_faction' => 'int',
+        'bracket_id'     => 'int',
+        'type'           => 'int',
+    ];
 
-	protected $dates = [
-		'date'
-	];
+    protected $dates = [
+        'date',
+    ];
 
-	protected $fillable = [
-		'winner_faction',
-		'bracket_id',
-		'type',
-		'date'
-	];
+    protected $fillable = [
+        'winner_faction',
+        'bracket_id',
+        'type',
+        'date',
+    ];
 }

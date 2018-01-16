@@ -10,30 +10,28 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class GameobjectAddon
- * 
+ * Class GameobjectAddon.
+ *
  * @property int $guid
  * @property int $invisibilityType
  * @property int $invisibilityValue
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class GameobjectAddon extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'gameobject_addon';
-	protected $primaryKey = 'guid';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'gameobject_addon';
+    protected $primaryKey = 'guid';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'invisibilityType' => 'int',
-		'invisibilityValue' => 'int'
-	];
+    protected $casts = [
+        'guid'              => 'int',
+        'invisibilityType'  => 'int',
+        'invisibilityValue' => 'int',
+    ];
 
-	protected $fillable = [
-		'invisibilityType',
-		'invisibilityValue'
-	];
+    protected $fillable = [
+        'invisibilityType',
+        'invisibilityValue',
+    ];
 }

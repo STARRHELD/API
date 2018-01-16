@@ -10,28 +10,26 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CharacterQueststatusSeasonal
- * 
+ * Class CharacterQueststatusSeasonal.
+ *
  * @property int $guid
  * @property int $quest
  * @property int $event
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CharacterQueststatusSeasonal extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'character_queststatus_seasonal';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'character_queststatus_seasonal';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'quest' => 'int',
-		'event' => 'int'
-	];
+    protected $casts = [
+        'guid'  => 'int',
+        'quest' => 'int',
+        'event' => 'int',
+    ];
 
-	protected $fillable = [
-		'event'
-	];
+    protected $fillable = [
+        'event',
+    ];
 }

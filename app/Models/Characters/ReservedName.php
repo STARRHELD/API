@@ -10,17 +10,15 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class ReservedName
- * 
- * @property string $name
+ * Class ReservedName.
  *
- * @package ThibaudDT\TrinityCoreModels\Characters
+ * @property string $name
  */
 class ReservedName extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'reserved_name';
-	protected $primaryKey = 'name';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'reserved_name';
+    protected $primaryKey = 'name';
+    public $incrementing = false;
+    public $timestamps = false;
 }

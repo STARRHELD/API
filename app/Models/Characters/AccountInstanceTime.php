@@ -10,27 +10,25 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class AccountInstanceTime
- * 
+ * Class AccountInstanceTime.
+ *
  * @property int $accountId
  * @property int $instanceId
  * @property int $releaseTime
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class AccountInstanceTime extends Eloquent
 {
-	protected $connection = 'characters';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'accountId' => 'int',
-		'instanceId' => 'int',
-		'releaseTime' => 'int'
-	];
+    protected $casts = [
+        'accountId'   => 'int',
+        'instanceId'  => 'int',
+        'releaseTime' => 'int',
+    ];
 
-	protected $fillable = [
-		'releaseTime'
-	];
+    protected $fillable = [
+        'releaseTime',
+    ];
 }

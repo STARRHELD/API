@@ -10,28 +10,26 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CharacterAchievement
- * 
+ * Class CharacterAchievement.
+ *
  * @property int $guid
  * @property int $achievement
  * @property int $date
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CharacterAchievement extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'character_achievement';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'character_achievement';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'achievement' => 'int',
-		'date' => 'int'
-	];
+    protected $casts = [
+        'guid'        => 'int',
+        'achievement' => 'int',
+        'date'        => 'int',
+    ];
 
-	protected $fillable = [
-		'date'
-	];
+    protected $fillable = [
+        'date',
+    ];
 }

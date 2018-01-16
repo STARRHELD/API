@@ -10,30 +10,28 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class PlayercreateinfoItem
- * 
+ * Class PlayercreateinfoItem.
+ *
  * @property int $race
  * @property int $class
  * @property int $itemid
  * @property int $amount
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class PlayercreateinfoItem extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'playercreateinfo_item';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'playercreateinfo_item';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'race' => 'int',
-		'class' => 'int',
-		'itemid' => 'int',
-		'amount' => 'int'
-	];
+    protected $casts = [
+        'race'   => 'int',
+        'class'  => 'int',
+        'itemid' => 'int',
+        'amount' => 'int',
+    ];
 
-	protected $fillable = [
-		'amount'
-	];
+    protected $fillable = [
+        'amount',
+    ];
 }

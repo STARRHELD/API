@@ -10,39 +10,37 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CharacterHomebind
- * 
+ * Class CharacterHomebind.
+ *
  * @property int $guid
  * @property int $mapId
  * @property int $zoneId
  * @property float $posX
  * @property float $posY
  * @property float $posZ
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CharacterHomebind extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'character_homebind';
-	protected $primaryKey = 'guid';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'character_homebind';
+    protected $primaryKey = 'guid';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'mapId' => 'int',
-		'zoneId' => 'int',
-		'posX' => 'float',
-		'posY' => 'float',
-		'posZ' => 'float'
-	];
+    protected $casts = [
+        'guid'   => 'int',
+        'mapId'  => 'int',
+        'zoneId' => 'int',
+        'posX'   => 'float',
+        'posY'   => 'float',
+        'posZ'   => 'float',
+    ];
 
-	protected $fillable = [
-		'mapId',
-		'zoneId',
-		'posX',
-		'posY',
-		'posZ'
-	];
+    protected $fillable = [
+        'mapId',
+        'zoneId',
+        'posX',
+        'posY',
+        'posZ',
+    ];
 }

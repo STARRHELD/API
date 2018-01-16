@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\API\Characters;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Characters\Auctionhouse as Auction;
 use App\Http\Resources\Auction as AuctionResource;
+use App\Models\Characters\Auctionhouse as Auction;
 
 class AuctionController extends Controller
 {
@@ -28,7 +27,8 @@ class AuctionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function show($id)

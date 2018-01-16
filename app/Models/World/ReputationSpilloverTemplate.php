@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class ReputationSpilloverTemplate
- * 
+ * Class ReputationSpilloverTemplate.
+ *
  * @property int $faction
  * @property int $faction1
  * @property float $rate_1
@@ -25,45 +25,43 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $faction4
  * @property float $rate_4
  * @property int $rank_4
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class ReputationSpilloverTemplate extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'reputation_spillover_template';
-	protected $primaryKey = 'faction';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'reputation_spillover_template';
+    protected $primaryKey = 'faction';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'faction' => 'int',
-		'faction1' => 'int',
-		'rate_1' => 'float',
-		'rank_1' => 'int',
-		'faction2' => 'int',
-		'rate_2' => 'float',
-		'rank_2' => 'int',
-		'faction3' => 'int',
-		'rate_3' => 'float',
-		'rank_3' => 'int',
-		'faction4' => 'int',
-		'rate_4' => 'float',
-		'rank_4' => 'int'
-	];
+    protected $casts = [
+        'faction'  => 'int',
+        'faction1' => 'int',
+        'rate_1'   => 'float',
+        'rank_1'   => 'int',
+        'faction2' => 'int',
+        'rate_2'   => 'float',
+        'rank_2'   => 'int',
+        'faction3' => 'int',
+        'rate_3'   => 'float',
+        'rank_3'   => 'int',
+        'faction4' => 'int',
+        'rate_4'   => 'float',
+        'rank_4'   => 'int',
+    ];
 
-	protected $fillable = [
-		'faction1',
-		'rate_1',
-		'rank_1',
-		'faction2',
-		'rate_2',
-		'rank_2',
-		'faction3',
-		'rate_3',
-		'rank_3',
-		'faction4',
-		'rate_4',
-		'rank_4'
-	];
+    protected $fillable = [
+        'faction1',
+        'rate_1',
+        'rank_1',
+        'faction2',
+        'rate_2',
+        'rank_2',
+        'faction3',
+        'rate_3',
+        'rank_3',
+        'faction4',
+        'rate_4',
+        'rank_4',
+    ];
 }

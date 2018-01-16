@@ -10,31 +10,29 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class GuildBankTab
- * 
+ * Class GuildBankTab.
+ *
  * @property int $guildid
  * @property int $TabId
  * @property string $TabName
  * @property string $TabIcon
  * @property string $TabText
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class GuildBankTab extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'guild_bank_tab';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'guild_bank_tab';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guildid' => 'int',
-		'TabId' => 'int'
-	];
+    protected $casts = [
+        'guildid' => 'int',
+        'TabId'   => 'int',
+    ];
 
-	protected $fillable = [
-		'TabName',
-		'TabIcon',
-		'TabText'
-	];
+    protected $fillable = [
+        'TabName',
+        'TabIcon',
+        'TabText',
+    ];
 }

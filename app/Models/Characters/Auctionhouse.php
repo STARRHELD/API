@@ -10,8 +10,8 @@ namespace App\Models\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Auctionhouse
- * 
+ * Class Auctionhouse.
+ *
  * @property int $id
  * @property int $houseid
  * @property int $itemguid
@@ -22,38 +22,37 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $lastbid
  * @property int $startbid
  * @property int $deposit
- *
  */
 class Auctionhouse extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'auctionhouse';
+    protected $connection = 'characters';
+    protected $table = 'auctionhouse';
 
-	public $incrementing = false;
-	public $timestamps = false;
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'houseid' => 'int',
-		'itemguid' => 'int',
-		'itemowner' => 'int',
-		'buyoutprice' => 'int',
-		'time' => 'int',
-		'buyguid' => 'int',
-		'lastbid' => 'int',
-		'startbid' => 'int',
-		'deposit' => 'int'
-	];
+    protected $casts = [
+        'id'          => 'int',
+        'houseid'     => 'int',
+        'itemguid'    => 'int',
+        'itemowner'   => 'int',
+        'buyoutprice' => 'int',
+        'time'        => 'int',
+        'buyguid'     => 'int',
+        'lastbid'     => 'int',
+        'startbid'    => 'int',
+        'deposit'     => 'int',
+    ];
 
-	protected $fillable = [
-		'houseid',
-		'itemguid',
-		'itemowner',
-		'buyoutprice',
-		'time',
-		'buyguid',
-		'lastbid',
-		'startbid',
-		'deposit'
-	];
+    protected $fillable = [
+        'houseid',
+        'itemguid',
+        'itemowner',
+        'buyoutprice',
+        'time',
+        'buyguid',
+        'lastbid',
+        'startbid',
+        'deposit',
+    ];
 }

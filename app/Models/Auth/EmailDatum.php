@@ -10,21 +10,19 @@ namespace ThibaudDT\TrinityCoreModels\Auth;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class EmailDatum
- * 
+ * Class EmailDatum.
+ *
  * @property int $id
  * @property string $email
  * @property string $commentaire
- *
- * @package ThibaudDT\TrinityCoreModels\Auth
  */
 class EmailDatum extends Eloquent
 {
-	protected $connection = 'auth';
-	public $timestamps = false;
+    protected $connection = 'auth';
+    public $timestamps = false;
 
-	protected $fillable = [
-		'email',
-		'commentaire'
-	];
+    protected $fillable = [
+        'email',
+        'commentaire',
+    ];
 }

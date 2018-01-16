@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Playercreateinfo
- * 
+ * Class Playercreateinfo.
+ *
  * @property int $race
  * @property int $class
  * @property int $map
@@ -20,33 +20,31 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property float $position_y
  * @property float $position_z
  * @property float $orientation
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class Playercreateinfo extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'playercreateinfo';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'playercreateinfo';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'race' => 'int',
-		'class' => 'int',
-		'map' => 'int',
-		'zone' => 'int',
-		'position_x' => 'float',
-		'position_y' => 'float',
-		'position_z' => 'float',
-		'orientation' => 'float'
-	];
+    protected $casts = [
+        'race'        => 'int',
+        'class'       => 'int',
+        'map'         => 'int',
+        'zone'        => 'int',
+        'position_x'  => 'float',
+        'position_y'  => 'float',
+        'position_z'  => 'float',
+        'orientation' => 'float',
+    ];
 
-	protected $fillable = [
-		'map',
-		'zone',
-		'position_x',
-		'position_y',
-		'position_z',
-		'orientation'
-	];
+    protected $fillable = [
+        'map',
+        'zone',
+        'position_x',
+        'position_y',
+        'position_z',
+        'orientation',
+    ];
 }

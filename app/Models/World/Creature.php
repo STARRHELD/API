@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Creature
- * 
+ * Class Creature.
+ *
  * @property int $guid
  * @property int $id
  * @property int $map
@@ -35,63 +35,61 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $unit_flags
  * @property int $dynamicflags
  * @property int $VerifiedBuild
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class Creature extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'creature';
-	protected $primaryKey = 'guid';
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'creature';
+    protected $primaryKey = 'guid';
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'map' => 'int',
-		'zoneId' => 'int',
-		'areaId' => 'int',
-		'spawnMask' => 'int',
-		'phaseMask' => 'int',
-		'modelid' => 'int',
-		'equipment_id' => 'int',
-		'position_x' => 'float',
-		'position_y' => 'float',
-		'position_z' => 'float',
-		'orientation' => 'float',
-		'spawntimesecs' => 'int',
-		'spawndist' => 'float',
-		'currentwaypoint' => 'int',
-		'curhealth' => 'int',
-		'curmana' => 'int',
-		'MovementType' => 'int',
-		'npcflag' => 'int',
-		'unit_flags' => 'int',
-		'dynamicflags' => 'int',
-		'VerifiedBuild' => 'int'
-	];
+    protected $casts = [
+        'id'              => 'int',
+        'map'             => 'int',
+        'zoneId'          => 'int',
+        'areaId'          => 'int',
+        'spawnMask'       => 'int',
+        'phaseMask'       => 'int',
+        'modelid'         => 'int',
+        'equipment_id'    => 'int',
+        'position_x'      => 'float',
+        'position_y'      => 'float',
+        'position_z'      => 'float',
+        'orientation'     => 'float',
+        'spawntimesecs'   => 'int',
+        'spawndist'       => 'float',
+        'currentwaypoint' => 'int',
+        'curhealth'       => 'int',
+        'curmana'         => 'int',
+        'MovementType'    => 'int',
+        'npcflag'         => 'int',
+        'unit_flags'      => 'int',
+        'dynamicflags'    => 'int',
+        'VerifiedBuild'   => 'int',
+    ];
 
-	protected $fillable = [
-		'id',
-		'map',
-		'zoneId',
-		'areaId',
-		'spawnMask',
-		'phaseMask',
-		'modelid',
-		'equipment_id',
-		'position_x',
-		'position_y',
-		'position_z',
-		'orientation',
-		'spawntimesecs',
-		'spawndist',
-		'currentwaypoint',
-		'curhealth',
-		'curmana',
-		'MovementType',
-		'npcflag',
-		'unit_flags',
-		'dynamicflags',
-		'VerifiedBuild'
-	];
+    protected $fillable = [
+        'id',
+        'map',
+        'zoneId',
+        'areaId',
+        'spawnMask',
+        'phaseMask',
+        'modelid',
+        'equipment_id',
+        'position_x',
+        'position_y',
+        'position_z',
+        'orientation',
+        'spawntimesecs',
+        'spawndist',
+        'currentwaypoint',
+        'curhealth',
+        'curmana',
+        'MovementType',
+        'npcflag',
+        'unit_flags',
+        'dynamicflags',
+        'VerifiedBuild',
+    ];
 }

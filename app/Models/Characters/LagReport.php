@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class LagReport
- * 
+ * Class LagReport.
+ *
  * @property int $reportId
  * @property int $guid
  * @property int $lagType
@@ -21,34 +21,32 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property float $posZ
  * @property int $latency
  * @property int $createTime
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class LagReport extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $primaryKey = 'reportId';
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $primaryKey = 'reportId';
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'lagType' => 'int',
-		'mapId' => 'int',
-		'posX' => 'float',
-		'posY' => 'float',
-		'posZ' => 'float',
-		'latency' => 'int',
-		'createTime' => 'int'
-	];
+    protected $casts = [
+        'guid'       => 'int',
+        'lagType'    => 'int',
+        'mapId'      => 'int',
+        'posX'       => 'float',
+        'posY'       => 'float',
+        'posZ'       => 'float',
+        'latency'    => 'int',
+        'createTime' => 'int',
+    ];
 
-	protected $fillable = [
-		'guid',
-		'lagType',
-		'mapId',
-		'posX',
-		'posY',
-		'posZ',
-		'latency',
-		'createTime'
-	];
+    protected $fillable = [
+        'guid',
+        'lagType',
+        'mapId',
+        'posX',
+        'posY',
+        'posZ',
+        'latency',
+        'createTime',
+    ];
 }

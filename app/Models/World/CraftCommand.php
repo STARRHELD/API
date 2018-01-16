@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CraftCommand
- * 
+ * Class CraftCommand.
+ *
  * @property int $id
  * @property int $type
  * @property int $duration
@@ -24,39 +24,37 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $skill_required
  * @property int $skill_level
  * @property string $description
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CraftCommand extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'craft_command';
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'craft_command';
+    public $timestamps = false;
 
-	protected $casts = [
-		'type' => 'int',
-		'duration' => 'int',
-		'loot_id' => 'int',
-		'required_item' => 'int',
-		'count' => 'int',
-		'reputation' => 'int',
-		'rep_level' => 'int',
-		'rep_gain' => 'int',
-		'skill_required' => 'int',
-		'skill_level' => 'int'
-	];
+    protected $casts = [
+        'type'           => 'int',
+        'duration'       => 'int',
+        'loot_id'        => 'int',
+        'required_item'  => 'int',
+        'count'          => 'int',
+        'reputation'     => 'int',
+        'rep_level'      => 'int',
+        'rep_gain'       => 'int',
+        'skill_required' => 'int',
+        'skill_level'    => 'int',
+    ];
 
-	protected $fillable = [
-		'type',
-		'duration',
-		'loot_id',
-		'required_item',
-		'count',
-		'reputation',
-		'rep_level',
-		'rep_gain',
-		'skill_required',
-		'skill_level',
-		'description'
-	];
+    protected $fillable = [
+        'type',
+        'duration',
+        'loot_id',
+        'required_item',
+        'count',
+        'reputation',
+        'rep_level',
+        'rep_gain',
+        'skill_required',
+        'skill_level',
+        'description',
+    ];
 }

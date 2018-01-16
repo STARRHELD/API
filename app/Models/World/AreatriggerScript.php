@@ -10,25 +10,23 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class AreatriggerScript
- * 
+ * Class AreatriggerScript.
+ *
  * @property int $entry
  * @property string $ScriptName
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class AreatriggerScript extends Eloquent
 {
-	protected $connection = 'world';
-	protected $primaryKey = 'entry';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $primaryKey = 'entry';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'entry' => 'int'
-	];
+    protected $casts = [
+        'entry' => 'int',
+    ];
 
-	protected $fillable = [
-		'ScriptName'
-	];
+    protected $fillable = [
+        'ScriptName',
+    ];
 }

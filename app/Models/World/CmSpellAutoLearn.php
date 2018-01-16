@@ -10,22 +10,20 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CmSpellAutoLearn
- * 
+ * Class CmSpellAutoLearn.
+ *
  * @property int $learned
  * @property int $tolearn
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CmSpellAutoLearn extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'cm_spell_auto_learn';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'cm_spell_auto_learn';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'learned' => 'int',
-		'tolearn' => 'int'
-	];
+    protected $casts = [
+        'learned' => 'int',
+        'tolearn' => 'int',
+    ];
 }

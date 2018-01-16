@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class ItemInstance
- * 
+ * Class ItemInstance.
+ *
  * @property int $guid
  * @property int $itemEntry
  * @property int $owner_guid
@@ -26,44 +26,42 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $durability
  * @property int $playedTime
  * @property string $text
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class ItemInstance extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'item_instance';
-	protected $primaryKey = 'guid';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'item_instance';
+    protected $primaryKey = 'guid';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'itemEntry' => 'int',
-		'owner_guid' => 'int',
-		'creatorGuid' => 'int',
-		'giftCreatorGuid' => 'int',
-		'count' => 'int',
-		'duration' => 'int',
-		'flags' => 'int',
-		'randomPropertyId' => 'int',
-		'durability' => 'int',
-		'playedTime' => 'int'
-	];
+    protected $casts = [
+        'guid'             => 'int',
+        'itemEntry'        => 'int',
+        'owner_guid'       => 'int',
+        'creatorGuid'      => 'int',
+        'giftCreatorGuid'  => 'int',
+        'count'            => 'int',
+        'duration'         => 'int',
+        'flags'            => 'int',
+        'randomPropertyId' => 'int',
+        'durability'       => 'int',
+        'playedTime'       => 'int',
+    ];
 
-	protected $fillable = [
-		'itemEntry',
-		'owner_guid',
-		'creatorGuid',
-		'giftCreatorGuid',
-		'count',
-		'duration',
-		'charges',
-		'flags',
-		'enchantments',
-		'randomPropertyId',
-		'durability',
-		'playedTime',
-		'text'
-	];
+    protected $fillable = [
+        'itemEntry',
+        'owner_guid',
+        'creatorGuid',
+        'giftCreatorGuid',
+        'count',
+        'duration',
+        'charges',
+        'flags',
+        'enchantments',
+        'randomPropertyId',
+        'durability',
+        'playedTime',
+        'text',
+    ];
 }

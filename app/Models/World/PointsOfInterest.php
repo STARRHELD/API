@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class PointsOfInterest
- * 
+ * Class PointsOfInterest.
+ *
  * @property int $ID
  * @property float $PositionX
  * @property float $PositionY
@@ -20,34 +20,32 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $Data
  * @property string $Name
  * @property int $VerifiedBuild
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class PointsOfInterest extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'points_of_interest';
-	protected $primaryKey = 'ID';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'points_of_interest';
+    protected $primaryKey = 'ID';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'ID' => 'int',
-		'PositionX' => 'float',
-		'PositionY' => 'float',
-		'Icon' => 'int',
-		'Flags' => 'int',
-		'Data' => 'int',
-		'VerifiedBuild' => 'int'
-	];
+    protected $casts = [
+        'ID'            => 'int',
+        'PositionX'     => 'float',
+        'PositionY'     => 'float',
+        'Icon'          => 'int',
+        'Flags'         => 'int',
+        'Data'          => 'int',
+        'VerifiedBuild' => 'int',
+    ];
 
-	protected $fillable = [
-		'PositionX',
-		'PositionY',
-		'Icon',
-		'Flags',
-		'Data',
-		'Name',
-		'VerifiedBuild'
-	];
+    protected $fillable = [
+        'PositionX',
+        'PositionY',
+        'Icon',
+        'Flags',
+        'Data',
+        'Name',
+        'VerifiedBuild',
+    ];
 }

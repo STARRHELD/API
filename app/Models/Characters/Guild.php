@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Guild
- * 
+ * Class Guild.
+ *
  * @property int $guildid
  * @property string $name
  * @property int $leaderguid
@@ -24,40 +24,38 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property string $motd
  * @property int $createdate
  * @property int $BankMoney
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class Guild extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'guild';
-	protected $primaryKey = 'guildid';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'guild';
+    protected $primaryKey = 'guildid';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guildid' => 'int',
-		'leaderguid' => 'int',
-		'EmblemStyle' => 'int',
-		'EmblemColor' => 'int',
-		'BorderStyle' => 'int',
-		'BorderColor' => 'int',
-		'BackgroundColor' => 'int',
-		'createdate' => 'int',
-		'BankMoney' => 'int'
-	];
+    protected $casts = [
+        'guildid'         => 'int',
+        'leaderguid'      => 'int',
+        'EmblemStyle'     => 'int',
+        'EmblemColor'     => 'int',
+        'BorderStyle'     => 'int',
+        'BorderColor'     => 'int',
+        'BackgroundColor' => 'int',
+        'createdate'      => 'int',
+        'BankMoney'       => 'int',
+    ];
 
-	protected $fillable = [
-		'name',
-		'leaderguid',
-		'EmblemStyle',
-		'EmblemColor',
-		'BorderStyle',
-		'BorderColor',
-		'BackgroundColor',
-		'info',
-		'motd',
-		'createdate',
-		'BankMoney'
-	];
+    protected $fillable = [
+        'name',
+        'leaderguid',
+        'EmblemStyle',
+        'EmblemColor',
+        'BorderStyle',
+        'BorderColor',
+        'BackgroundColor',
+        'info',
+        'motd',
+        'createdate',
+        'BankMoney',
+    ];
 }

@@ -10,23 +10,21 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CmAutospellcasterCaster
- * 
+ * Class CmAutospellcasterCaster.
+ *
  * @property int $guid
  * @property int $type
  * @property int $category
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CmAutospellcasterCaster extends Eloquent
 {
-	protected $connection = 'world';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'guid' => 'int',
-		'type' => 'int',
-		'category' => 'int'
-	];
+    protected $casts = [
+        'guid'     => 'int',
+        'type'     => 'int',
+        'category' => 'int',
+    ];
 }

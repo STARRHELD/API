@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class SpellArea
- * 
+ * Class SpellArea.
+ *
  * @property int $spell
  * @property int $area
  * @property int $quest_start
@@ -22,33 +22,31 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property int $autocast
  * @property int $quest_start_status
  * @property int $quest_end_status
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class SpellArea extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'spell_area';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'spell_area';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'spell' => 'int',
-		'area' => 'int',
-		'quest_start' => 'int',
-		'quest_end' => 'int',
-		'aura_spell' => 'int',
-		'racemask' => 'int',
-		'gender' => 'int',
-		'autocast' => 'int',
-		'quest_start_status' => 'int',
-		'quest_end_status' => 'int'
-	];
+    protected $casts = [
+        'spell'              => 'int',
+        'area'               => 'int',
+        'quest_start'        => 'int',
+        'quest_end'          => 'int',
+        'aura_spell'         => 'int',
+        'racemask'           => 'int',
+        'gender'             => 'int',
+        'autocast'           => 'int',
+        'quest_start_status' => 'int',
+        'quest_end_status'   => 'int',
+    ];
 
-	protected $fillable = [
-		'quest_end',
-		'autocast',
-		'quest_start_status',
-		'quest_end_status'
-	];
+    protected $fillable = [
+        'quest_end',
+        'autocast',
+        'quest_start_status',
+        'quest_end_status',
+    ];
 }

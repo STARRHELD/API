@@ -10,32 +10,30 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class InstanceTemplate
- * 
+ * Class InstanceTemplate.
+ *
  * @property int $map
  * @property int $parent
  * @property string $script
  * @property int $allowMount
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class InstanceTemplate extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'instance_template';
-	protected $primaryKey = 'map';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'instance_template';
+    protected $primaryKey = 'map';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'map' => 'int',
-		'parent' => 'int',
-		'allowMount' => 'int'
-	];
+    protected $casts = [
+        'map'        => 'int',
+        'parent'     => 'int',
+        'allowMount' => 'int',
+    ];
 
-	protected $fillable = [
-		'parent',
-		'script',
-		'allowMount'
-	];
+    protected $fillable = [
+        'parent',
+        'script',
+        'allowMount',
+    ];
 }

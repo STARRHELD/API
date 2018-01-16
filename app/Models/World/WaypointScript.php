@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class WaypointScript
- * 
+ * Class WaypointScript.
+ *
  * @property int $id
  * @property int $delay
  * @property int $command
@@ -23,40 +23,38 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property float $z
  * @property float $o
  * @property int $guid
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class WaypointScript extends Eloquent
 {
-	protected $connection = 'world';
-	protected $primaryKey = 'guid';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $primaryKey = 'guid';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'delay' => 'int',
-		'command' => 'int',
-		'datalong' => 'int',
-		'datalong2' => 'int',
-		'dataint' => 'int',
-		'x' => 'float',
-		'y' => 'float',
-		'z' => 'float',
-		'o' => 'float',
-		'guid' => 'int'
-	];
+    protected $casts = [
+        'id'        => 'int',
+        'delay'     => 'int',
+        'command'   => 'int',
+        'datalong'  => 'int',
+        'datalong2' => 'int',
+        'dataint'   => 'int',
+        'x'         => 'float',
+        'y'         => 'float',
+        'z'         => 'float',
+        'o'         => 'float',
+        'guid'      => 'int',
+    ];
 
-	protected $fillable = [
-		'id',
-		'delay',
-		'command',
-		'datalong',
-		'datalong2',
-		'dataint',
-		'x',
-		'y',
-		'z',
-		'o'
-	];
+    protected $fillable = [
+        'id',
+        'delay',
+        'command',
+        'datalong',
+        'datalong2',
+        'dataint',
+        'x',
+        'y',
+        'z',
+        'o',
+    ];
 }

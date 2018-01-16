@@ -10,31 +10,29 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class GameobjectQuestitem
- * 
+ * Class GameobjectQuestitem.
+ *
  * @property int $GameObjectEntry
  * @property int $Idx
  * @property int $ItemId
  * @property int $VerifiedBuild
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class GameobjectQuestitem extends Eloquent
 {
-	protected $connection = 'world';
-	protected $table = 'gameobject_questitem';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'world';
+    protected $table = 'gameobject_questitem';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'GameObjectEntry' => 'int',
-		'Idx' => 'int',
-		'ItemId' => 'int',
-		'VerifiedBuild' => 'int'
-	];
+    protected $casts = [
+        'GameObjectEntry' => 'int',
+        'Idx'             => 'int',
+        'ItemId'          => 'int',
+        'VerifiedBuild'   => 'int',
+    ];
 
-	protected $fillable = [
-		'ItemId',
-		'VerifiedBuild'
-	];
+    protected $fillable = [
+        'ItemId',
+        'VerifiedBuild',
+    ];
 }

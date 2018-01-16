@@ -10,28 +10,26 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class GameEventConditionSave
- * 
+ * Class GameEventConditionSave.
+ *
  * @property int $eventEntry
  * @property int $condition_id
  * @property float $done
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class GameEventConditionSave extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'game_event_condition_save';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'game_event_condition_save';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'eventEntry' => 'int',
-		'condition_id' => 'int',
-		'done' => 'float'
-	];
+    protected $casts = [
+        'eventEntry'   => 'int',
+        'condition_id' => 'int',
+        'done'         => 'float',
+    ];
 
-	protected $fillable = [
-		'done'
-	];
+    protected $fillable = [
+        'done',
+    ];
 }

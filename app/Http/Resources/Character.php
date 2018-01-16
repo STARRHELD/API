@@ -9,7 +9,8 @@ class Character extends Resource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return array
      */
     public function toArray($request)
@@ -21,7 +22,7 @@ class Character extends Resource
             'name'  => $this->name,
             'race'  => $this->race,
             'class' => $this->class,
-            'level' => $this->level
+            'level' => $this->level,
         ];
     }
 }

@@ -10,27 +10,25 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class WardenAction
- * 
+ * Class WardenAction.
+ *
  * @property int $wardenId
  * @property int $action
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class WardenAction extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'warden_action';
-	protected $primaryKey = 'wardenId';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'warden_action';
+    protected $primaryKey = 'wardenId';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'wardenId' => 'int',
-		'action' => 'int'
-	];
+    protected $casts = [
+        'wardenId' => 'int',
+        'action'   => 'int',
+    ];
 
-	protected $fillable = [
-		'action'
-	];
+    protected $fillable = [
+        'action',
+    ];
 }

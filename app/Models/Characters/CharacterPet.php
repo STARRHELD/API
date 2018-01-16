@@ -10,8 +10,8 @@ namespace ThibaudDT\TrinityCoreModels\Characters;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class CharacterPet
- * 
+ * Class CharacterPet.
+ *
  * @property int $id
  * @property int $entry
  * @property int $owner
@@ -29,50 +29,48 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  * @property int $curhappiness
  * @property int $savetime
  * @property string $abdata
- *
- * @package ThibaudDT\TrinityCoreModels\Characters
  */
 class CharacterPet extends Eloquent
 {
-	protected $connection = 'characters';
-	protected $table = 'character_pet';
-	public $incrementing = false;
-	public $timestamps = false;
+    protected $connection = 'characters';
+    protected $table = 'character_pet';
+    public $incrementing = false;
+    public $timestamps = false;
 
-	protected $casts = [
-		'id' => 'int',
-		'entry' => 'int',
-		'owner' => 'int',
-		'modelid' => 'int',
-		'CreatedBySpell' => 'int',
-		'PetType' => 'int',
-		'level' => 'int',
-		'exp' => 'int',
-		'Reactstate' => 'int',
-		'renamed' => 'int',
-		'slot' => 'int',
-		'curhealth' => 'int',
-		'curmana' => 'int',
-		'curhappiness' => 'int',
-		'savetime' => 'int'
-	];
+    protected $casts = [
+        'id'             => 'int',
+        'entry'          => 'int',
+        'owner'          => 'int',
+        'modelid'        => 'int',
+        'CreatedBySpell' => 'int',
+        'PetType'        => 'int',
+        'level'          => 'int',
+        'exp'            => 'int',
+        'Reactstate'     => 'int',
+        'renamed'        => 'int',
+        'slot'           => 'int',
+        'curhealth'      => 'int',
+        'curmana'        => 'int',
+        'curhappiness'   => 'int',
+        'savetime'       => 'int',
+    ];
 
-	protected $fillable = [
-		'entry',
-		'owner',
-		'modelid',
-		'CreatedBySpell',
-		'PetType',
-		'level',
-		'exp',
-		'Reactstate',
-		'name',
-		'renamed',
-		'slot',
-		'curhealth',
-		'curmana',
-		'curhappiness',
-		'savetime',
-		'abdata'
-	];
+    protected $fillable = [
+        'entry',
+        'owner',
+        'modelid',
+        'CreatedBySpell',
+        'PetType',
+        'level',
+        'exp',
+        'Reactstate',
+        'name',
+        'renamed',
+        'slot',
+        'curhealth',
+        'curmana',
+        'curhappiness',
+        'savetime',
+        'abdata',
+    ];
 }
